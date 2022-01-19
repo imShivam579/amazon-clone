@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Checkout from "./pages/Checkout";
+import Payment from "./pages/Payment";
 import Login from "./components/Login/Login";
 import { useStateValue } from "./redux/StateProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -31,6 +32,10 @@ function App() {
     <>
       <Router>
         <Switch>
+          <Route path="/payment">
+            <Header />
+            <Payment />
+          </Route>
           <Route path="/checkout">
             <Header />
             <Checkout />
